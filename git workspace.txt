@@ -1,0 +1,923 @@
+ Pictures/
+ PrintHood@
+ Recent@
+'Saved Games'/
+ Searches/
+ SendTo@
+'Start Menu'@
+ Templates@
+ Videos/
+'VirtualBox VMs'/
+
+ELCOT@pjkserver MINGW64 /c/users/elcot
+$ cd newworkspace01
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ ls
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ cd newworkspace01/
+bash: cd: newworkspace01/: No such file or directory
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ clear
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ touch 1.java
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ ls
+1.java
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        1.java
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git add .
+Aborting commit due to empty commit message.
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   1.java
+
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git commit -m "this is first commit"
+[master (root-commit) b09ef60] this is first commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 1.java
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git status
+On branch master
+Your branch is based on 'origin/master', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+nothing to commit, working tree clean
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ ls
+1.java
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ cat 1.java
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ echo "line 1" > 1.java
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ cat 1.java
+line 1
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git status
+On branch master
+Your branch is based on 'origin/master', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   1.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git add .
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git status
+On branch master
+Your branch is based on 'origin/master', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   1.java
+
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git commit -m "our second commit"
+[master 3a69ef9] our second commit
+ 1 file changed, 1 insertion(+)
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ ls
+1.java
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git status
+On branch master
+Your branch is based on 'origin/master', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+nothing to commit, working tree clean
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git log
+commit 3a69ef9d2ec39d9035f5f7deb93a896115d76202 (HEAD -> master)
+Author: pruthvirajpj <beayoudude@gmail.com>
+Date:   Fri Dec 22 22:31:44 2017 +0530
+
+    our second commit
+
+commit b09ef601205c20724ddfbce6547a792008e0479b
+Author: pruthvirajpj <beayoudude@gmail.com>
+Date:   Fri Dec 22 22:29:03 2017 +0530
+
+    this is first commit
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git show 3a69ef
+commit 3a69ef9d2ec39d9035f5f7deb93a896115d76202 (HEAD -> master)
+Author: pruthvirajpj <beayoudude@gmail.com>
+Date:   Fri Dec 22 22:31:44 2017 +0530
+
+    our second commit
+
+diff --git a/1.java b/1.java
+index e69de29..89b24ec 100644
+--- a/1.java
++++ b/1.java
+@@ -0,0 +1 @@
++line 1
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git push
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (6/6), 434 bytes | 72.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0)
+To C:/Users/elcot/central.git
+ * [new branch]      master -> master
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git pull
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0)
+Unpacking objects: 100% (3/3), done.
+From C:/Users/elcot/central
+   3a69ef9..3b0ef42  master     -> origin/master
+Updating 3a69ef9..3b0ef42
+Fast-forward
+ 1.java | 2 +-
+ 2.java | 1 +
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+ create mode 100644 2.java
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ ls
+1.java  2.java
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ touch 3.java
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git add .
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git commit -m "adding a new file 3.java"
+[master 25f0043] adding a new file 3.java
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 3.java
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git log
+commit 25f0043ad86df1bf7a1b6cfa4637d0fa963669d1 (HEAD -> master)
+Author: pruthvirajpj <beayoudude@gmail.com>
+Date:   Fri Dec 22 22:58:05 2017 +0530
+
+    adding a new file 3.java
+
+commit 3b0ef42125e1d4ba2d752a768e93b8b8e65258f6 (origin/master)
+Author: pruthvirajpj <beayoudude@gmail.com>
+Date:   Fri Dec 22 22:49:26 2017 +0530
+
+    set of changes to be commited
+
+commit 3a69ef9d2ec39d9035f5f7deb93a896115d76202
+Author: pruthvirajpj <beayoudude@gmail.com>
+Date:   Fri Dec 22 22:31:44 2017 +0530
+
+    our second commit
+
+commit b09ef601205c20724ddfbce6547a792008e0479b
+Author: pruthvirajpj <beayoudude@gmail.com>
+Date:   Fri Dec 22 22:29:03 2017 +0530
+
+    this is first commit
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git push
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 305 bytes | 61.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To C:/Users/elcot/central.git
+   3b0ef42..25f0043  master -> master
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git log
+commit 25f0043ad86df1bf7a1b6cfa4637d0fa963669d1 (HEAD -> master, origin/master)
+Author: pruthvirajpj <beayoudude@gmail.com>
+Date:   Fri Dec 22 22:58:05 2017 +0530
+
+    adding a new file 3.java
+
+commit 3b0ef42125e1d4ba2d752a768e93b8b8e65258f6
+Author: pruthvirajpj <beayoudude@gmail.com>
+Date:   Fri Dec 22 22:49:26 2017 +0530
+
+    set of changes to be commited
+
+commit 3a69ef9d2ec39d9035f5f7deb93a896115d76202
+Author: pruthvirajpj <beayoudude@gmail.com>
+Date:   Fri Dec 22 22:31:44 2017 +0530
+
+    our second commit
+
+commit b09ef601205c20724ddfbce6547a792008e0479b
+Author: pruthvirajpj <beayoudude@gmail.com>
+Date:   Fri Dec 22 22:29:03 2017 +0530
+
+    this is first commit
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git log -number
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git log -3
+commit 25f0043ad86df1bf7a1b6cfa4637d0fa963669d1 (HEAD -> master, origin/master)
+Author: pruthvirajpj <beayoudude@gmail.com>
+Date:   Fri Dec 22 22:58:05 2017 +0530
+
+    adding a new file 3.java
+
+commit 3b0ef42125e1d4ba2d752a768e93b8b8e65258f6
+Author: pruthvirajpj <beayoudude@gmail.com>
+Date:   Fri Dec 22 22:49:26 2017 +0530
+
+    set of changes to be commited
+
+commit 3a69ef9d2ec39d9035f5f7deb93a896115d76202
+Author: pruthvirajpj <beayoudude@gmail.com>
+Date:   Fri Dec 22 22:31:44 2017 +0530
+
+    our second commit
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git log -1
+commit 25f0043ad86df1bf7a1b6cfa4637d0fa963669d1 (HEAD -> master, origin/master)
+Author: pruthvirajpj <beayoudude@gmail.com>
+Date:   Fri Dec 22 22:58:05 2017 +0530
+
+    adding a new file 3.java
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git log --oneline
+25f0043 (HEAD -> master, origin/master) adding a new file 3.java
+3b0ef42 set of changes to be commited
+3a69ef9 our second commit
+b09ef60 this is first commit
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git log --oneline -2
+25f0043 (HEAD -> master, origin/master) adding a new file 3.java
+3b0ef42 set of changes to be commited
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git log --oneline --grep "file"
+25f0043 (HEAD -> master, origin/master) adding a new file 3.java
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ get log --grep "file"
+bash: get: command not found
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git log --oneline --grep "commit"
+3b0ef42 set of changes to be commited
+3a69ef9 our second commit
+b09ef60 this is first commit
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ ls
+1.java  2.java  3.java
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ touch 1.class
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ ls
+1.class  1.java  2.java  3.java
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        1.class
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ touch log.txt
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ ls
+1.class  1.java  2.java  3.java  log.txt
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        1.class
+        log.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ ls -la .gitignore
+ls: cannot access '.gitignore': No such file or directory
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ echo "1.class" >.gitignore
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ cat .gitignore
+1.class
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+        log.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ ls
+1.class  1.java  2.java  3.java  log.txt
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ echo "log.txt" >> .gitignore
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ ls
+1.class  1.java  2.java  3.java  log.txt
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git add .
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   .gitignore
+
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git commit -m "adding new file "
+[master e6470f3] adding new file
+ 1 file changed, 2 insertions(+)
+ create mode 100644 .gitignore
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ touch 2.class
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        2.class
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ cat .ignore
+cat: .ignore: No such file or directory
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ cat .gitignore
+1.class
+log.txt
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ vim .gitignore
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ touch 3.class
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git add .
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   .gitignore
+
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ ls
+1.class  1.java  2.class  2.java  3.class  3.java  log.txt
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ hit status
+bash: hit: command not found
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ hgit status
+bash: hgit: command not found
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   .gitignore
+
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git commit -m "test commit for gitignored"
+[master f26db98] test commit for gitignored
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git log
+commit f26db9886f4071a839c29077848f37ce34b5913a (HEAD -> master)
+Author: pruthvirajpj <beayoudude@gmail.com>
+Date:   Fri Dec 22 23:17:04 2017 +0530
+
+    test commit for gitignored
+
+commit e6470f36fd644740f21d008dd6efc04063390612
+Author: pruthvirajpj <beayoudude@gmail.com>
+Date:   Fri Dec 22 23:13:56 2017 +0530
+
+    adding new file
+
+commit 25f0043ad86df1bf7a1b6cfa4637d0fa963669d1 (origin/master)
+Author: pruthvirajpj <beayoudude@gmail.com>
+Date:   Fri Dec 22 22:58:05 2017 +0530
+
+    adding a new file 3.java
+
+commit 3b0ef42125e1d4ba2d752a768e93b8b8e65258f6
+Author: pruthvirajpj <beayoudude@gmail.com>
+Date:   Fri Dec 22 22:49:26 2017 +0530
+
+    set of changes to be commited
+
+commit 3a69ef9d2ec39d9035f5f7deb93a896115d76202
+Author: pruthvirajpj <beayoudude@gmail.com>
+Date:   Fri Dec 22 22:31:44 2017 +0530
+
+    our second commit
+
+commit b09ef601205c20724ddfbce6547a792008e0479b
+Author: pruthvirajpj <beayoudude@gmail.com>
+Date:   Fri Dec 22 22:29:03 2017 +0530
+
+    this is first commit
+(END)
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+ls
+bash: lls: command not found
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ ls
+1.class  1.java  2.class  2.java  3.class  3.java  log.txt
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git push
+To C:/Users/elcot/central.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'C:/Users/elcot/central.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git push
+To C:/Users/elcot/central.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'C:/Users/elcot/central.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ ls
+1.class  1.java  2.class  2.java  3.class  3.java  log.txt
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ vim .gitignore
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git log
+commit f26db9886f4071a839c29077848f37ce34b5913a (HEAD -> master)
+Author: pruthvirajpj <beayoudude@gmail.com>
+Date:   Fri Dec 22 23:17:04 2017 +0530
+
+    test commit for gitignored
+
+commit e6470f36fd644740f21d008dd6efc04063390612
+Author: pruthvirajpj <beayoudude@gmail.com>
+Date:   Fri Dec 22 23:13:56 2017 +0530
+
+    adding new file
+
+commit 25f0043ad86df1bf7a1b6cfa4637d0fa963669d1 (origin/master)
+Author: pruthvirajpj <beayoudude@gmail.com>
+Date:   Fri Dec 22 22:58:05 2017 +0530
+
+    adding a new file 3.java
+
+commit 3b0ef42125e1d4ba2d752a768e93b8b8e65258f6
+Author: pruthvirajpj <beayoudude@gmail.com>
+Date:   Fri Dec 22 22:49:26 2017 +0530
+
+    set of changes to be commited
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ l
+bash: l: command not found
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ ls
+1.class  1.java  2.class  2.java  3.class  3.java  log.txt
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git push
+To C:/Users/elcot/central.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'C:/Users/elcot/central.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git branch
+* master
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git branch win
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git branch
+* master
+  win
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ ls
+1.class  1.java  2.class  2.java  3.class  3.java  log.txt
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git log --oneline
+f26db98 (HEAD -> master, win) test commit for gitignored
+e6470f3 adding new file
+25f0043 (origin/master) adding a new file 3.java
+3b0ef42 set of changes to be commited
+3a69ef9 our second commit
+b09ef60 this is first commit
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git checkout win
+Switched to branch 'win'
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (win)
+$ git branch
+  master
+* win
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (win)
+$ git log --oneline
+f26db98 (HEAD -> win, master) test commit for gitignored
+e6470f3 adding new file
+25f0043 (origin/master) adding a new file 3.java
+3b0ef42 set of changes to be commited
+3a69ef9 our second commit
+b09ef60 this is first commit
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (win)
+$ ls
+1.class  1.java  2.class  2.java  3.class  3.java  log.txt
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (win)
+$ toch 4.java
+bash: toch: command not found
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (win)
+$ touch 5.java
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (win)
+$ git add .
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (win)
+$ git status
+On branch win
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   5.java
+
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (win)
+$ git commit -m " new master change "
+[win 369f152]  new master change
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 5.java
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (win)
+$ ls
+1.class  1.java  2.class  2.java  3.class  3.java  5.java  log.txt
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (win)
+$ git log
+commit 369f15274c5a48cb10820acfa149c19bf73e526b (HEAD -> win)
+Author: pruthvirajpj <beayoudude@gmail.com>
+Date:   Fri Dec 22 23:28:19 2017 +0530
+
+     new master change
+
+commit f26db9886f4071a839c29077848f37ce34b5913a (master)
+Author: pruthvirajpj <beayoudude@gmail.com>
+Date:   Fri Dec 22 23:17:04 2017 +0530
+
+    test commit for gitignored
+
+commit e6470f36fd644740f21d008dd6efc04063390612
+Author: pruthvirajpj <beayoudude@gmail.com>
+Date:   Fri Dec 22 23:13:56 2017 +0530
+
+    adding new file
+
+commit 25f0043ad86df1bf7a1b6cfa4637d0fa963669d1 (origin/master)
+Author: pruthvirajpj <beayoudude@gmail.com>
+Date:   Fri Dec 22 22:58:05 2017 +0530
+
+    adding a new file 3.java
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (win)
+$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git log
+commit f26db9886f4071a839c29077848f37ce34b5913a (HEAD -> master)
+Author: pruthvirajpj <beayoudude@gmail.com>
+Date:   Fri Dec 22 23:17:04 2017 +0530
+
+    test commit for gitignored
+
+commit e6470f36fd644740f21d008dd6efc04063390612
+Author: pruthvirajpj <beayoudude@gmail.com>
+Date:   Fri Dec 22 23:13:56 2017 +0530
+
+    adding new file
+
+commit 25f0043ad86df1bf7a1b6cfa4637d0fa963669d1 (origin/master)
+Author: pruthvirajpj <beayoudude@gmail.com>
+Date:   Fri Dec 22 22:58:05 2017 +0530
+
+    adding a new file 3.java
+
+commit 3b0ef42125e1d4ba2d752a768e93b8b8e65258f6
+Author: pruthvirajpj <beayoudude@gmail.com>
+Date:   Fri Dec 22 22:49:26 2017 +0530
+
+    set of changes to be commited
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git log --oneline
+f26db98 (HEAD -> master) test commit for gitignored
+e6470f3 adding new file
+25f0043 (origin/master) adding a new file 3.java
+3b0ef42 set of changes to be commited
+3a69ef9 our second commit
+b09ef60 this is first commit
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ ls
+1.class  1.java  2.class  2.java  3.class  3.java  log.txt
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ touch 5.java
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git add .
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git commit -m "
+error: switch `m' requires a value
+usage: git commit [<options>] [--] <pathspec>...
+
+    -q, --quiet           suppress summary after successful commit
+    -v, --verbose         show diff in commit message template
+
+Commit message options
+    -F, --file <file>     read message from file
+    --author <author>     override author for commit
+    --date <date>         override date for commit
+    -m, --message <message>
+                          commit message
+    -c, --reedit-message <commit>
+                          reuse and edit message from specified commit
+    -C, --reuse-message <commit>
+                          reuse message from specified commit
+    --fixup <commit>      use autosquash formatted message to fixup specified co                                                                                                                mmit
+    --squash <commit>     use autosquash formatted message to squash specified c                                                                                                                ommit
+    --reset-author        the commit is authored by me now (used with -C/-c/--am                                                                                                                end)
+    -s, --signoff         add Signed-off-by:
+    -t, --template <file>
+                          use specified template file
+    -e, --edit            force edit of commit
+    --cleanup <default>   how to strip spaces and #comments from message
+    --status              include status in commit message template
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+Commit contents options
+    -a, --all             commit all changed files
+    -i, --include         add specified files to index for commit
+    --interactive         interactively add files
+    -p, --patch           interactively add changes
+    -o, --only            commit only specified files
+    -n, --no-verify       bypass pre-commit and commit-msg hooks
+    --dry-run             show what would be committed
+    --short               show status concisely
+    --branch              show branch information
+    --porcelain           machine-readable output
+    --long                show status in long format (default)
+    -z, --null            terminate entries with NUL
+    --amend               amend previous commit
+    --no-post-rewrite     bypass post-rewrite hook
+    -u, --untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no.                                                                                                                 (Default: all)
+
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git commit -m "change of 5th"
+[master 6501c08] change of 5th
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 5.java
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ ls
+1.class  1.java  2.class  2.java  3.class  3.java  5.java  log.txt
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git checkout win
+Switched to branch 'win'
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (win)
+$ ls
+1.class  1.java  2.class  2.java  3.class  3.java  5.java  log.txt
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (win)
+$ git push
+fatal: The current branch win has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin win
+
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (win)
+$ git merge master win
+Merge made by the 'recursive' strategy.
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (win)
+$ git merge master win
+Already up to date.
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (win)
+$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git merge win master
+Updating 6501c08..4ab2818
+Fast-forward
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ ls
+1.class  1.java  2.class  2.java  3.class  3.java  5.java  log.txt
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$ git push
+To C:/Users/elcot/central.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'C:/Users/elcot/central.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace01 (master)
+$

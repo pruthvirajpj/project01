@@ -1,0 +1,175 @@
+  (use "git add <file>..." to include in what will be committed)
+
+        2.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace02 (master)
+$ git add .
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace02 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   1.java
+        new file:   2.java
+
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace02 (master)
+$ clear
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace02 (master)
+$ git commit -m "set of changes to be commited"
+[master 3b0ef42] set of changes to be commited
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+ create mode 100644 2.java
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace02 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace02 (master)
+$ git log
+commit 3b0ef42125e1d4ba2d752a768e93b8b8e65258f6 (HEAD -> master)
+Author: pruthvirajpj <beayoudude@gmail.com>
+Date:   Fri Dec 22 22:49:26 2017 +0530
+
+    set of changes to be commited
+
+commit 3a69ef9d2ec39d9035f5f7deb93a896115d76202 (origin/master, origin/HEAD)
+Author: pruthvirajpj <beayoudude@gmail.com>
+Date:   Fri Dec 22 22:31:44 2017 +0530
+
+    our second commit
+
+commit b09ef601205c20724ddfbce6547a792008e0479b
+Author: pruthvirajpj <beayoudude@gmail.com>
+Date:   Fri Dec 22 22:29:03 2017 +0530
+
+    this is first commit
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace02 (master)
+$ git push
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 286 bytes | 57.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To C:/Users/elcot/central.git/
+   3a69ef9..3b0ef42  master -> master
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace02 (master)
+$ ls
+1.java  2.java
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace02 (master)
+$ touch 4.java
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace02 (master)
+$ git add .
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace02 (master)
+$ git commit "adding new file 4.java"
+error: pathspec 'adding new file 4.java' did not match any file(s) known to git.
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace02 (master)
+$ git commit -m "adding new file 4.java"
+[master fc07665] adding new file 4.java
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 4.java
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace02 (master)
+$ git push
+To C:/Users/elcot/central.git/
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'C:/Users/elcot/central.git/'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace02 (master)
+$ git pull
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0)
+Unpacking objects: 100% (3/3), done.
+From C:/Users/elcot/central
+   3b0ef42..25f0043  master     -> origin/master
+Merge made by the 'recursive' strategy.
+ 3.java | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 3.java
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace02 (master)
+$ ls
+1.java  2.java  3.java  4.java
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace02 (master)
+$ git push
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 495 bytes | 123.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0)
+To C:/Users/elcot/central.git/
+   25f0043..13d8c53  master -> master
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace02 (master)
+$ git log
+commit 13d8c5346de557a5e2d29c66ca95f2234d568121 (HEAD -> master, origin/master,                                                                                                                 origin/HEAD)
+Merge: fc07665 25f0043
+Author: pruthvirajpj <beayoudude@gmail.com>
+Date:   Fri Dec 22 23:00:08 2017 +0530
+
+    Merge branch 'master' of C:/Users/elcot/central
+
+commit fc076654f96217b2596c0a2d4f504cc777991f84
+Author: pruthvirajpj <beayoudude@gmail.com>
+Date:   Fri Dec 22 22:59:34 2017 +0530
+
+    adding new file 4.java
+
+commit 25f0043ad86df1bf7a1b6cfa4637d0fa963669d1
+Author: pruthvirajpj <beayoudude@gmail.com>
+Date:   Fri Dec 22 22:58:05 2017 +0530
+
+    adding a new file 3.java
+
+commit 3b0ef42125e1d4ba2d752a768e93b8b8e65258f6
+Author: pruthvirajpj <beayoudude@gmail.com>
+Date:   Fri Dec 22 22:49:26 2017 +0530
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace02 (master)
+$ git push
+Everything up-to-date
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace02 (master)
+$ git pull
+Already up to date.
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/newworkspace02 (master)
+$ cd ..
+
+ELCOT@pjkserver MINGW64 /c/users/elcot
+$ cd /central.git
+bash: cd: /central.git: No such file or directory
+
+ELCOT@pjkserver MINGW64 /c/users/elcot
+$ cd central.git
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/central.git (BARE:master)
+$ git branch
+* master
+
+ELCOT@pjkserver MINGW64 /c/users/elcot/central.git (BARE:master)
+$
